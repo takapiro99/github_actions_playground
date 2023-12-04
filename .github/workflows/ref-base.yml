@@ -15,5 +15,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Case of Failure
         id: print
-        if: steps.success.conclusion == 'skipped'
         run: echo '1. ${{ github.base_ref }}, 2. ${{ github.event.pull_request.base.ref }}'
